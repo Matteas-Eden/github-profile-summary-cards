@@ -95,11 +95,11 @@ jobs:
 - Add GITHUB_TOKEN to `.env` file. ex:`GITHUB_TOKEN=abcda69ddf66ae95538c5b1666591b59b4abc73a`
 
 ```
-npm install
+yarn install
 ```
 
 ```
-npm run run [username]
+yarn run run [username]
 ```
 
 :star: This repo just for fun, feel free to contribution! :star:
