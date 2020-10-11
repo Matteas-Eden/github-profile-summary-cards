@@ -4,66 +4,52 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards/blob/master/LICENSE)
 ![release](https://img.shields.io/github/v/release/vn7n24fzkq/github-profile-summary-cards.svg)
 
-[繁體中文](./docs/README.zh-tw.md)
+This repo is a fork of Yi-Heng's work [here](https://github.com/vn7n24fzkg/github-profile-summary-cards), which itself was inspired by David's work with [profile-summary-for-github](https://github.com/tipsy/profile-summary-for-github)
 
-This repo is inspired by [profile-summary-for-github](https://github.com/tipsy/profile-summary-for-github)
-
-This action generate your github profile summary cards and push to your repo.
-You can also trigger action by yourself after add this action.
+The action contained in this repository generates your github profile summary cards and pushes them to your repo.
+You can also trigger the action by yourself after adding it.
 
 `After you add this to your workflow, your should trigger the workflow then you can use those cards immediately.`
 
-| :warning: | If your workflow does not generate all cards in output folder, then you need to use [Personal access token](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) instead of GITHUB_TOKEN in workflow.  |
+| :warning: | If your workflow does not generate all cards in output folder, then you need to use [Personal Access Token](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) instead of GITHUB_TOKEN in workflow.  |
 | :-------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-[Creating a personal access token
+[Creating a Personal Access Token
 ](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
 
-[Personal token permissions](https://github.com/vn7n24fzkq/github-profile-summary-cards/wiki/Personal-access-token-permissions)
-
+[Personal token permissions](https://github.com/Matteas-Eden/github-profile-summary-cards/wiki/Personal-access-token-permissions)
 
 ---
 
-## Example
+## Examples
 
 ![](https://raw.githubusercontent.com/vn7n24fzkq/vn7n24fzkq/master/profile-summary-card-output/solarized/0-profile-details.svg)
 ![](https://raw.githubusercontent.com/vn7n24fzkq/vn7n24fzkq/master/profile-summary-card-output/solarized/1-repos-per-language.svg)
 ![](https://raw.githubusercontent.com/vn7n24fzkq/vn7n24fzkq/master/profile-summary-card-output/solarized/2-most-commit-language.svg)
 ![](https://raw.githubusercontent.com/vn7n24fzkq/vn7n24fzkq/master/profile-summary-card-output/solarized/3-stats.svg)
 
-[More example with themes](https://github.com/vn7n24fzkq/github-profile-summary-cards-example/tree/master/profile-summary-card-output)
-
----
-
-## Use template
-
-[github-profile-summary-cards-example](https://github.com/vn7n24fzkq/github-profile-summary-cards-example)
-
-Action already setup In this template, you just need click `use this template button` to create your repo and wait for workflow to finish.
-
-Then you can use everything in `profile-summary-card-output` folder.
+[More example with themes](https://github.com/Matteas-Eden/github-profile-summary-cards-example/tree/master/profile-summary-card-output)
 
 ---
 
 ## Wiki
 
-[Add to my profile README](https://github.com/vn7n24fzkq/github-profile-summary-cards/wiki/Add-to-my-profile-README) (For those who don't familiar with github action)
+[How do I add this to my profile README?](https://github.com/Matteas-Eden/github-profile-summary-cards/wiki/Add-to-my-profile-README)
 
 ---
 
-## GitHub Actions usage
+## GitHub Actions Usage
 
 ### `GITHUB_TOKEN`
 
-| :warning: | If you get this error`Error: Resource not accessible by integration` then you need to use [Personal access token](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) instead of GITHUB_TOKEN . |
+| :warning: | If you get this error `Error: Resource not accessible by integration` then you need to use a [Personal Access Token](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets) instead of GITHUB_TOKEN . |
 | :-------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
+The default token doesn't have permission for accessing private content, so if you want to calculate using that you will need to use [Personal Access Token](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets).
 
-Default token doesn't has permission for private content, so if you want to calculate private content you will need to use [Personal access token](https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets).
+After the action is finished, you can see the output is pushed to a folder which is named `profile-summary-card-output`.
 
-After the action finished. You can see the output is push to a folder which named `profile-summary-card-output`.
-
-`Note: Those cards might not be upadated in time, because github raw file has cache time.`
+`Note: The cards might not be updated too frequently, because GitHub raw files have a caching time.`
 
 ```yml
 name: GitHub-Profile-Summary-Cards
@@ -80,7 +66,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: vn7n24fzkq/github-profile-summary-cards@release
+      - uses: Matteas-Eden/github-profile-summary-cards@release
         env: # default use ${{ secrets.GITHUB_TOKEN }}, you can change to your personal access token
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -89,10 +75,10 @@ jobs:
 
 ---
 
-## Local Run
+## Run Locally
 
-- I build this on `node 12`, lower version should get some problems.
-- Add GITHUB_TOKEN to `.env` file. ex:`GITHUB_TOKEN=abcda69ddf66ae95538c5b1666591b59b4abc73a`
+- Built on NodeJS v12, so only that and above is supported.
+- Add GITHUB_TOKEN to `.env` file, e.g. `GITHUB_TOKEN=abcdefghijklmnopqrstuvwxyz123456789`
 
 ```
 yarn install
@@ -102,4 +88,4 @@ yarn install
 yarn run run [username]
 ```
 
-:star: This repo just for fun, feel free to contribution! :star:
+:star: Feel free to fork the repo and create a PR! All contributions welcome! :star:
