@@ -1,7 +1,7 @@
 {
   "name": "github-profile-summary-cards",
-  "version": "0.2.5",
-  "description": "Generate github profile summary cards",
+  "version": "0.2.6",
+  "description": "Generate GitHub Profile Summary Cards",
   "main": "src/app.js",
   "scripts": {
     "run": "node src/app.js",
@@ -11,7 +11,7 @@
   "keywords": [
     "github"
   ],
-  "author": "vn7 <vn7n24fzkq@gmail.com>",
+  "author": "Matteas-Eden",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
