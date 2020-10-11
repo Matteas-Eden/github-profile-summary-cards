@@ -23,10 +23,10 @@ You can also trigger the action by yourself after adding it.
 
 ## Examples
 
-![](https://raw.githubusercontent.com/Matteas-Eden/Matteas-Eden/master/assets/0-profile-details.svg)
-![](https://raw.githubusercontent.com/Matteas-Eden/Matteas-Eden/master/assets/1-repos-per-language.svg)
-![](https://raw.githubusercontent.com/Matteas-Eden/Matteas-Eden/master/assets/2-most-commit-language.svg)
-![](https://raw.githubusercontent.com/Matteas-Eden/Matteas-Eden/master/assets/3-stats.svg)
+![](https://raw.githubusercontent.com/Matteas-Eden/Matteas-Eden/master/profile-summary-card-output/github/0-profile-details.svg)
+![](https://raw.githubusercontent.com/Matteas-Eden/Matteas-Eden/master/profile-summary-card-output/github/1-repos-per-language.svg)
+![](https://raw.githubusercontent.com/Matteas-Eden/Matteas-Eden/master/profile-summary-card-output/github/2-most-commit-language.svg)
+![](https://raw.githubusercontent.com/Matteas-Eden/Matteas-Eden/master/profile-summary-card-output/github/3-stats.svg)
 
 <!-- [More example with themes](https://github.com/Matteas-Eden/github-profile-summary-cards-example/tree/master/profile-summary-card-output) -->
 
