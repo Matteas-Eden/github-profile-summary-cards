@@ -2,7 +2,7 @@
 
 ![Unit Tests](https://github.com/vn7n24fzkq/github-profile-summary-cards/workflows/Unit%20Tests/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards/blob/master/LICENSE)
-![release](https://img.shields.io/github/v/release/vn7n24fzkq/github-profile-summary-cards.svg)
+![release](https://img.shields.io/github/v/release/Matteas-Eden/github-profile-summary-cards.svg)
 
 This repo is a fork of Yi-Heng's work [here](https://github.com/vn7n24fzkg/github-profile-summary-cards), which itself was inspired by David's work with [profile-summary-for-github](https://github.com/tipsy/profile-summary-for-github)
 
