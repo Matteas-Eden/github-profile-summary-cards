@@ -6,7 +6,7 @@ const getContributionByYear = require("../github-api/contributions-by-year");
 const statsCard = require("../templates/stats-card");
 const { writeSVG, outputPath } = require("../utils/file-writer");
 
-const createStatsCard = async function (username) {
+const createStatsCard = async function (username, useLegacyStatsCard) {
   let userDetails = await getProfileDetails(username);
   let totalStars = userDetails.totalStars;
   let totalCommitContributions = 0;
@@ -58,7 +58,7 @@ const createStatsCard = async function (username) {
   for (let themeName in Themes) {
     let theme = Themes[themeName];
     let title = "Stats";
-    let svgString = statsCard(`${title}`, statsData, theme);
+    let svgString = statsCard(`${title}`, statsData, theme, useLegacyStatsCard);
     //output to folder, use 3- prefix for sort in preview
     writeSVG(themeName, "3-stats", svgString);
   }

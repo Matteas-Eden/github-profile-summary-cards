@@ -3,8 +3,8 @@ const d3 = require("d3");
 const moment = require("moment");
 const Icons = require("../const/icon");
 
-function createStatsCard(title, statsData, theme) {
-  let card = new Card(title, 340, 200, theme);
+function createStatsCard(title, statsData, theme, useLegacyStatsCard) {
+  let card = new Card(title, (useLegacyStatsCard) ? 230:340, 200, theme);
   let svg = card.getSVG();
 
   //draw icon
@@ -46,19 +46,21 @@ function createStatsCard(title, statsData, theme) {
     .text((d) => {
       return `${d.value}`;
     })
-    .attr("x", 130)
+    .attr("x", (useLegacyStatsCard) ? 140:130)
     .attr("y", (d) => labelHeight * d.index * 1.8 + labelHeight)
     .style("fill", theme.text_color)
     .style("font-size", `${labelHeight}px`);
 
-  const panelForGitHubLogo = svg
-    .append("g")
-    .attr("transform", `translate(220,20)`);
-  panelForGitHubLogo
-    .append("g")
-    .attr("transform", `scale(6)`)
-    .style("fill", theme.icon_color)
-    .html(Icons.GITHUB);
+  if (!useLegacyStatsCard) {
+    const panelForGitHubLogo = svg
+      .append("g")
+      .attr("transform", `translate(220,20)`);
+    panelForGitHubLogo
+      .append("g")
+      .attr("transform", `scale(6)`)
+      .style("fill", theme.icon_color)
+      .html(Icons.GITHUB);
+  }
 
   return card.toString();
 }

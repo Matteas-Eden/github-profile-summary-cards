@@ -49,6 +49,7 @@ const commitFile = async () => {
 const main = async () => {
   core.info(`Start...`);
   let username = process.argv[2];
+  let legacyStatsCard = process.argv[3] == 'true';
   let isInGithubAction = false;
 
   if (process.argv.length == 2) {
@@ -85,7 +86,7 @@ const main = async () => {
     }
     try {
       core.info(`Creating StatsCard...`);
-      await createStatsCard(username);
+      await createStatsCard(username, legacyStatsCard);
     } catch (error) {
       core.error(`Error when creating StatsCard \n${error.stack}`);
     }
